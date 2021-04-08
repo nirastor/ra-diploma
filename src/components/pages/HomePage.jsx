@@ -1,4 +1,5 @@
 import React from 'react'
+import Catalog from '../catalog/Catalog/Catalog'
 import Hits from '../Hits/Hits'
 
 export default function MainPage() {
@@ -11,7 +12,7 @@ export default function MainPage() {
 
       <section className="catalog">
         <h2 className="text-center">Каталог</h2>
-        <div>Тут каталог</div> 
+        <Catalog hasSearch={false}/>
       </section>
     </>
   );

@@ -1,13 +1,13 @@
 export default function AboutPage() {
   return (
     <>
-      <section class="top-sales">
-        <h2 class="text-center">О&nbsp;магазине</h2>
+      <section className="top-sales">
+        <h2 className="text-center">О&nbsp;магазине</h2>
         <p>
           В&nbsp;Интернете можно встретить немало магазинов, предлагающих аксессуары. Но&nbsp;именно к&nbsp;нам хочется
           возвращаться снова и&nbsp;снова.
         </p>
-        <h3 class="h4 text-center">Мы&nbsp;предлагаем вам особые условия:</h3>
+        <h3 className="h4 text-center">Мы&nbsp;предлагаем вам особые условия:</h3>
         <ol>
           <li>
             Индивидуальный подход специалиста. Когда поступает новая коллекция обуви весна-лето или

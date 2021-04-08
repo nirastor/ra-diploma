@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import ProductCard from '../ProductCard/ProductCard';
 
 export default function Hits() {
   const [hits, setHits] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:7070/api/top-sales.')
+    fetch('http://localhost:7070/api/top-sales')
     .then(r => r.json())
-    .then(d => console.log(d))
+    .then(d => setHits(d))
   },[])
   
   return(
     <>
       <div className="row">
-        <div>Продукт</div>
-        <div>Продукт</div>
-        <div>Продукт</div>
+        {hits.map(hit => <ProductCard key={hit.id} productDescription={hit}/>)}
       </div>
-      
     </>
   )
 }
