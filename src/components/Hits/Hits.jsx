@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
+import axios from 'axios'
 
 export default function Hits() {
   const [hits, setHits] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:7070/api/top-sales')
-    .then(r => r.json())
-    .then(d => setHits(d))
+    axios('http://localhost:7070/api/top-sales')
+      .then(r => setHits(r.data))
   },[])
   
   return(

@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState } from 'react'
 
 export default function ProductCard({ productDescription }) {
   const {images, title, price, id} = productDescription
   const [src, setSrc] = useState(images[0])
+
   const url = `/products/${id}.html`
 
   const showHover = () => setSrc(images[1])
