@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { setCategoryID } from '../../../app/catalogSlice'
+import axios from 'axios'
 
 export default function CatalogCategories() {
   const dispatch = useDispatch()
@@ -10,11 +11,10 @@ export default function CatalogCategories() {
   const selectedId = useSelector(state => state.catalog.categoryId)
 
   useEffect(() => {
-    fetch('http://localhost:7070/api/categories')
-    .then(r => r.json())
-    .then(d => {
-      d.unshift({id: 0, title: "Все"})
-      setCategories(d)
+    axios('http://localhost:7070/api/categories')
+    .then(res => {
+      res.data.unshift({id: 0, title: "Все"})
+      setCategories(res.data)
     })
   }, []);
 
