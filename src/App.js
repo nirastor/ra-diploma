@@ -7,12 +7,13 @@ import Page404 from './components/pages/Page404'
 
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import MainLayout from './components/MainLayout/MainLayout'
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
+      <Header />
+      <MainLayout>
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/about" component={AboutPage} />
@@ -20,8 +21,8 @@ function App() {
           <Route path="/contacts" component={ContactPage} />
           <Route component={Page404}/>
         </Switch>
-        <Footer />
-      </div>
+      </MainLayout>
+      <Footer />
     </Router>
   );
 }
