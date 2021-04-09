@@ -47,7 +47,7 @@ export default function CatalogProduct() {
   return (
     <>
       <div className="row mb-4">
-        {products.map(prod => <ProductCard key={prod.id} productDescription={prod}/>)}
+        {products.map(prod => <ProductCard key={prod.id} productDescription={prod} inCatalog={true}/>)}
       </div>
       {showMoreButton &&
         <div className="text-center">

@@ -422,6 +422,34 @@ section {
   min-height: 300px;
 }
 
+/* Card */
+.card-img-top {
+  height: 20vw;
+  object-fit: contain
+}
+
+.card {
+  min-height: 452px;
+}
+
+.card-body {
+  position: relative;
+  padding: 0;
+  margin: 20px;
+}
+
+.card-title {
+  position: absolute;
+  margin: 0;
+}
+
+.card-bottom {
+  position: absolute;
+  top: 64px
+}
+
+
+
 /* Catalog */
 .catalog {
   min-height: 600px;
