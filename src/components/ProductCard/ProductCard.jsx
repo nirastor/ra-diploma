@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function ProductCard({ productDescription, inCatalog }) {
   const {images, title, price, id} = productDescription
@@ -30,7 +31,7 @@ export default function ProductCard({ productDescription, inCatalog }) {
             <p className="card-text card-title">{title}</p>
             <div className="card-bottom">
               <p className="card-text">{price}</p>
-              <a href={url} className="btn btn-outline-primary">Заказать</a>
+              <NavLink to={url} className="btn btn-outline-primary">Заказать</NavLink>
             </div>
           </div>
         </div>
